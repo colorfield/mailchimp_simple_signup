@@ -1,4 +1,4 @@
-name: Mailchimp Signup
+name: Mailchimp Simple Signup
 type: module
 description: Simple Mailchimp signup that delegates early to Mailchimp and focuses on display options.
 core: 8.x

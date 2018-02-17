@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\mailchimp_signup\Plugin\Block;
+namespace Drupal\mailchimp_simple_signup\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -11,7 +11,7 @@ use Drupal\Core\Url;
  * Provides a 'ClosableButtonBlock' block.
  *
  * @Block(
- *  id = "mailchimp_signup_closable_button",
+ *  id = "mailchimp_simple_signup_closable_button",
  *  admin_label = @Translation("Mailchimp closable signup button"),
  * )
  */
@@ -81,7 +81,7 @@ class ClosableButtonBlock extends BlockBase {
     $buttonLink = $buttonLink->toRenderable();
     $buttonLink['#attributes'] = ['class' => ['button', 'btn', 'btn-primary']];
     $build = [
-      'mailchimp_signup_closable_button' => [
+      'mailchimp_simple_signup_closable_button' => [
         '#theme' => 'closable_button',
         '#mailing_list_description' => $this->configuration['mailing_list_description'],
         '#button_label' => $this->configuration['button_label'],
@@ -89,7 +89,7 @@ class ClosableButtonBlock extends BlockBase {
         '#button_link' => $buttonLink,
         '#attached' => [
           'library' => [
-            'mailchimp_signup/closable_button',
+            'mailchimp_simple_signup/closable_button',
           ],
           'drupalSettings' => [
             // @todo pass from configuration

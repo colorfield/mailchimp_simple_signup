@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\mailchimp_signup\Functional;
+namespace Drupal\Tests\mailchimp_simple_signup\Functional;
 
 use Drupal\Core\Url;
 use Drupal\Tests\BrowserTestBase;
@@ -8,7 +8,7 @@ use Drupal\Tests\BrowserTestBase;
 /**
  * Simple test to ensure that main page loads with module enabled.
  *
- * @group mailchimp_signup
+ * @group mailchimp_simple_signup
  */
 class LoadTest extends BrowserTestBase {
 
@@ -17,7 +17,7 @@ class LoadTest extends BrowserTestBase {
    *
    * @var array
    */
-  public static $modules = ['mailchimp_signup'];
+  public static $modules = ['mailchimp_simple_signup'];
 
   /**
    * A user with permission to administer site configuration.

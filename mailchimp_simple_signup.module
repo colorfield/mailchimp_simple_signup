@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains mailchimp_signup.module.
+ * Contains mailchimp_simple_signup.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -10,10 +10,10 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function mailchimp_signup_help($route_name, RouteMatchInterface $route_match) {
+function mailchimp_simple_signup_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    // Main module help for the mailchimp_signup module.
-    case 'help.page.mailchimp_signup':
+    // Main module help for the mailchimp_simple_signup module.
+    case 'help.page.mailchimp_simple_signup':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
       $output .= '<p>' . t('Simple Mailchimp signup that delegates early to Mailchimp and focuses on display options.') . '</p>';
@@ -26,7 +26,7 @@ function mailchimp_signup_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function mailchimp_signup_theme() {
+function mailchimp_simple_signup_theme() {
   return [
     'closable_button' => [
       'variables' => [

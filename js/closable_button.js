@@ -13,14 +13,14 @@
        *
        * @type {string}
        */
-      var cookieName = 'mailchimp_signup_closable_button';
+      var cookieName = 'mailchimp_simple_signup_closable_button';
 
       /**
        * Wrapper element that encloses the button provided by the Twig template.
        *
        * @type {*|HTMLElement}
        */
-      var closableWrapper = $(context).find('.mailchimp-signup__closable-button');
+      var closableWrapper = $(context).find('.mailchimp-simple-signup__closable-button');
 
       /**
        * Close button.
@@ -38,7 +38,7 @@
         // and append the button for each found path.
         // @todo the cookie could be set for each different path if several mailing lists are provided.
         var elem_path = $(elem).find('a').first().attr('href');
-        $(elem).attr('mailchimp_signup_closable_button', elem_path)
+        $(elem).attr('mailchimp_simple_signup_closable_button', elem_path)
           .append(closeButton.clone());
         // Sets the cookie to visible.
         if (typeof Cookies.get(cookieName) === 'undefined') {
@@ -46,7 +46,7 @@
           $(elem).addClass('js-visible');
           // Show closableWrapper if cookie is not set as invisible.
         }
-        else if (Cookies.get('mailchimp_signup_closable_button') !== 'invisible') {
+        else if (Cookies.get(cookieName) !== 'invisible') {
           $(elem).addClass('js-visible');
         }
       });

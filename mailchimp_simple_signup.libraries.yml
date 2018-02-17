@@ -9,7 +9,7 @@ closable_button:
   dependencies:
      - core/jquery
      - core/jquery.once
-     - mailchimp_signup/js-cookie
+     - mailchimp_simple_signup/js-cookie
   css:
     component:
       css/closable_button.css: {}
