@@ -1,0 +1,7 @@
+.mailchimp-signup__closable-button {
+  display: none;
+}
+
+.mailchimp-signup__closable-button.js-visible {
+  display: block;
+}
